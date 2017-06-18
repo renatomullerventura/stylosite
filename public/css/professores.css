@@ -1,0 +1,97 @@
+.foto_prof{
+    overflow: hidden;
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 200px;
+    height: 200px;
+}
+
+.foto_prof img{
+    width: 100%;
+    min-height: 200px;
+    min-width: 100%;
+}
+
+.desc_prof {
+    color: #fff;
+    padding: 20px !important;
+    min-height: 200px;
+    position: relative;
+}
+
+.professores>div{
+    margin-bottom: 10px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.professores>div:nth-child(odd) .desc_prof:before,
+.professores>div:nth-child(even) .desc_prof:before {
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    content: "";
+    top: 100px;
+    margin-top: -30px;
+    position: absolute;
+}
+.professores>div:nth-child(odd) .desc_prof:before {
+    left: -30px;
+    border-left: none;
+}
+.professores>div:nth-child(even) .desc_prof:before {
+    right: -30px;
+    border-right: none;
+}
+
+@media only screen and (max-width: 990px) {
+    
+    .professores>div{
+        margin-bottom:50px;
+    }
+    .professores>div:nth-child(odd) .desc_prof:before,
+    .professores>div:nth-child(even) .desc_prof:before {
+        width: 0;
+        height: 0;
+        border: none;
+        content: "";
+        top: 100px;
+        margin-top: -30px;
+        position: absolute;
+    }
+    
+}
+
+.professores>div:nth-child(1n+1)>.desc_prof:before {
+    border-right-color: #78C4BC;
+    border-left-color: #78C4BC;
+}
+.professores>div:nth-child(2n+1)>.desc_prof:before {
+    border-right-color: #EAAA07;
+    border-left-color: #EAAA07;
+}
+.professores>div:nth-child(3n+1)>.desc_prof:before {
+    border-right-color: #A883CC;
+    border-left-color: #A883CC;
+}
+
+
+.professores>div:nth-child(1n+1)>.desc_prof {
+    background: #78C4BC;
+}
+.professores>div:nth-child(2n+1)>.desc_prof {
+    background: #EAAA07;
+}
+.professores>div:nth-child(3n+1)>.desc_prof {
+    background: #A883CC;
+}
+
+
+.professores>div:nth-child(odd) .foto_prof,
+.professores>div:nth-child(odd) .foto_desc {
+    float: left;
+}
+.professores>div:nth-child(even) .foto_prof,
+.professores>div:nth-child(even) .foto_desc {
+    float: right;
+}
